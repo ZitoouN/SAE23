@@ -47,9 +47,6 @@ class Joueurs(ModelForm):
             'mdp' : _('Mot de passe'),
             'type' : _('Type'),
         }
-        widgets = {
-            'mdp': forms.PasswordInput(),
-        }
 
 class Commentaires(ModelForm):
     class Meta :

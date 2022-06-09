@@ -1,34 +1,44 @@
 from django.db import models
 
 class Categorie(models.Model):
-    nom = models.CharField(max_length=100)
-    descriptif = models.TextField(null=True, blank=True)
+    nom_cat = models.CharField(max_length=100)
+    descriptif_cat = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        chaine = f"{self.nom}"
+        chaine = f"{self.nom_cat}"
         return chaine
 
+    def dico_categorie(self):
+        return {"nom_cat": self.nom_cat, "descriptif_cat": self.descriptif_cat}
+
 class Jeux(models.Model):
-    titre = models.CharField(max_length=100)
-    annee = models.IntegerField(blank=False)
-    image = models.ImageField(upload_to='photo',verbose_name='My Photo')
-    editeur = models.CharField(max_length=100)
-    auteur = models.CharField(max_length=100)
-    categorie = models.ForeignKey("categorie", on_delete=models.CASCADE)
+    titre_jeux = models.CharField(max_length=100)
+    annee_jeux = models.IntegerField(blank=False)
+    image_jeux = models.ImageField(upload_to='photo',verbose_name='My Photo')
+    editeur_jeux = models.CharField(max_length=100)
+    auteur_jeux = models.CharField(max_length=100)
+    categorie_jeux = models.ForeignKey("Categorie", on_delete=models.CASCADE)
 
     def __str__(self):
-        chaine2 = f"{self.titre}"
+        chaine2 = f"{self.titre_jeux}"
         return chaine2
 
+    def dico_jeux(self):
+        return {"titre_jeux": self.titre_jeux, "anne_jeux": self.annee_jeux, "image_jeux": self.image_jeux, "editeur_jeux": self.image_jeux, "auteur_jeux": self.auteur_jeux, }
+
+
 class Auteurs(models.Model):
-    nom = models.CharField(max_length=100)
-    prenom = models.CharField(max_length=100)
-    age = models.IntegerField(blank=False)
-    photo = models.ImageField(upload_to='photo',verbose_name='My Photo')
+    nom_aut = models.CharField(max_length=100)
+    prenom_aut = models.CharField(max_length=100)
+    age_aut = models.IntegerField(blank=False)
+    photo_aut = models.ImageField(upload_to='photo',verbose_name='My Photo')
 
     def __str__(self):
-        chaine3 = f"{self.nom}"
+        chaine3 = f"{self.nom_aut}"
         return chaine3
+
+    def dico_aut(self):
+        return {"nom_aut": self.nom_aut, "prenom_aut": self.prenom_aut, "age_aut": self.age_aut, "photo_aut": self.photo_aut}
 
 class Joueurs(models.Model):
     nom = models.CharField(max_length=100)
