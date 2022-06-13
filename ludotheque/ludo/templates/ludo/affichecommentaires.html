@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% extends 'main.html' %}
     {% load static %}
@@ -7,31 +8,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
+    <div class="margin">
 
-<h1>Nom categorie :</h1>
-<p>
-    {{commentaires.jeux_com}}
-</p>
+        <h1>Nom categorie :</h1>
+        <p>
+            {{commentaires.jeux_com}}
+        </p>
 
-<h2>Joueur commenté :</h2>
-<p>
-    {{commentaires.joueurs_com}}
-</p>
+        <h2>Joueur commenté :</h2>
+        <p>
+            {{commentaires.joueurs_com}}
+        </p>
 
-<h2>Note :</h2>
-<p>
-    {{commentaires.note_com}}
-</p>
+        <h2>Note :</h2>
+        <p>
+            {{commentaires.note_com}}
+        </p>
 
-<h2>Commentaire du jeu :</h2>
-<p>
-    {{commentaires.commentaire_jeu}}
-</p>
+        <h2>Commentaire du jeu :</h2>
+        <p>
+            {{commentaires.commentaire_jeu}}
+        </p>
 
-<h2>Date du commentaire :</h2>
-<p>
-    {{commentaires.date_com}}
-</p>
+        <h2>Date du commentaire :</h2>
+        <p>
+            {{commentaires.date_com}}
+        </p>
+    </div>
 </body>
+
 </html>
+{% endblock %}

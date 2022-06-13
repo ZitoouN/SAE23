@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% extends 'main.html' %}
     {% load static %}
     {% block content %}
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Liste des auteurs</title>
 </head>
+
 <body>
+    <div class="margin">
 
-<h1>Informations sur l'Auteurs :</h1>
+        <h1>Informations sur l'Auteurs :</h1>
 
-<h2>Nom de l'Auteur :</h2>
-<p>
-    {{auteurs.nom_aut}}
-</p>
+        <h2>Nom de l'Auteur :</h2>
+        <p>
+            {{auteurs.nom_aut}}
+        </p>
 
-<h2>Prénom de l'Auteur :</h2>
-<p>
-    {{auteurs.prenom_aut}}
-</p>
+        <h2>Prénom de l'Auteur :</h2>
+        <p>
+            {{auteurs.prenom_aut}}
+        </p>
 
-<h2>Age de l'Auteur :</h2>
-<p>
-    {{auteurs.age_aut}}
-</p>
+        <h2>Age de l'Auteur :</h2>
+        <p>
+            {{auteurs.age_aut}}
+        </p>
 
-
+    </div>
 </body>
+
 </html>
+{% endblock %}

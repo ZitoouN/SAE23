@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% extends 'main.html' %}
     {% load static %}
@@ -7,21 +8,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
+    <div class="margin">
 
-<h1>Titre du jeux :</h1>
-<p>
-    {{jeux.titre_jeux}}
-</p>
+    <h1>Titre du jeux :</h1>
+    <p>
+        {{jeux.titre_jeux}}
+    </p>
 
-<h2>Année du jeu :</h2>
-<p>
-    {{jeux.annee_jeux}}
-</p>
+    <h2>Année du jeu :</h2>
+    <p>
+        {{jeux.annee_jeux}}
+    </p>
 
-<h2>Categorie :</h2>
-<p>
-    {{jeux.categorie_jeux}}
-</p>
+    <h2>Categorie :</h2>
+    <p>
+        {{jeux.categorie_jeux}}
+    </p>
+    </div>
 </body>
+
 </html>
+{% endblock %}

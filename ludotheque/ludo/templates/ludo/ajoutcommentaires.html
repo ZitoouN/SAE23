@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   {% extends 'main.html' %}
   {% load static %}
   {% block content %}
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
+
 <body>
+  <div class="margin">
 
-<h1>Saisir les informations suivantes afin de créer un commentaire :</h1>
-  {% if id != '' %}
+    <h1>Saisir les informations suivantes afin de créer un commentaire :</h1>
+    {% if id != '' %}
     <form method="post" action="/ludo/traitementcommentaires/">
-   {% else %}
+      {% else %}
 
-   {% endif %}
-  {% csrf_token %}
-  {{form.as_ul}}
-  <input type="submit" value="Ajouter"/>
+      {% endif %}
+      {% csrf_token %}
+      {{form.as_p}}
+      <input class="inputmore" type="submit" value="Ajouter" />
     </form>
+  </div>
 </body>
+
 </html>
+{% endblock %}

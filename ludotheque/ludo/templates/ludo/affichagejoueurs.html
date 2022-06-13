@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% extends 'main.html' %}
     {% load static %}
-    
+
     {% block content %}
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Liste des joueurs</title>
 </head>
+
 <body>
+    <div class="margin">
 
-<h2 > Liste des joueurs crée :</h2>
+        <h2> Liste des joueurs crée :</h2>
 
-<ol>
-    {% for p in liste %}
-        <li> {{p}} <a href="/ludo/affichejoueurs/{{p.id}}/">détails</a> <a class="updatejoueurs" href="/ludo/updatejoueurs/{{p.id}}/">Modifier</a> <a class="del" href="/ludo/deletejoueurs/{{p.id}}/">Supprimer</a> <a class="updatejoueurs" href="/ludo/updatejoueurs/{{p.id}}/">Fiche du joueur</a> </li>
-    {% endfor %}
-</ol>
+        <ol>
+            {% for p in liste %}
+            <li> {{p}} <a href="/ludo/affichejoueurs/{{p.id}}/">détails</a> <a class="updatejoueurs"
+                    href="/ludo/updatejoueurs/{{p.id}}/">Modifier</a> <a class="del"
+                    href="/ludo/deletejoueurs/{{p.id}}/">Supprimer</a> <a class="updatejoueurs"
+                    href="/ludo/updatejoueurs/{{p.id}}/">Fiche du joueur</a> </li>
+            {% endfor %}
+        </ol>
+    </div>
 </body>
+
 </html>
+{% endblock %}

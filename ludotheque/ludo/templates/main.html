@@ -8,57 +8,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{%static 'csstemplates/index.css'%}">
-    <title>Bienvenue TEST</title>
 </head>
 <html>
-
-<body>
-    <h2>Ludothèque</h2>
-    <div id="wrap">
-        <ul class="navbar">
-            <li>
-                <a href="/ludo/">Accueil</a>
-            </li>
-            <li>
-                <a href="/ludo/">Catégorie</a>
-                <ul>
-                    <li><a href="/ludo/ajoutcategorie">Ajouter une categorie</a></li>
-                    <li><a href="/ludo/affichagecategorie">liste des categories</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="/ludo/">Jeux</a>
-                <ul>
-                    <li><a href="/ludo/ajoutjeux">Ajouter un Jeux</a></li>
-                    <li><a href="/ludo/affichagejeux">liste des jeux</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="/ludo/">Auteurs</a>
-                <ul>
-                    <li><a href="/ludo/ajoutauteurs">Ajouter un auteur</a></li>
-                    <li><a href="/ludo/affichageauteurs">Liste des auteurs</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="/ludo/">Joueurs</a>
-                <ul>
-                    <li><a href="/ludo/ajoutjoueurs">Créer un Joueur</a></li>
-                    <li><a href="/ludo/affichagejoueurs">liste des Joueurs</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="/ludo/">Commentaires</a>
-                <ul>
-                    <li><a href="/ludo/ajoutcommentaires">Ajouter un commentaire</a></li>
-                    <li><a href="/ludo/affichagecommentaires">Liste des Commentaires</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</body>
+<h1>Ludothèque</h1>
+<div id="wrap">
+    <ul class="navbar">
+        <li>
+            <a href="/ludo/">Accueil</a>
+        </li>
+        <li>
+            <a href="/ludo/">Catégorie</a>
+            <ul>
+                <li><a href="/ludo/ajoutcategorie">Ajouter une categorie</a></li>
+                <li><a href="/ludo/affichagecategorie">liste des categories</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/ludo/">Jeux</a>
+            <ul>
+                <li><a href="/ludo/ajoutjeux">Ajouter un Jeux</a></li>
+                <li><a href="/ludo/affichagejeux">liste des jeux</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/ludo/">Auteurs</a>
+            <ul>
+                <li><a href="/ludo/ajoutauteurs">Ajouter un auteur</a></li>
+                <li><a href="/ludo/affichageauteurs">Liste des auteurs</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/ludo/">Joueurs</a>
+            <ul>
+                <li><a href="/ludo/ajoutjoueurs">Créer un Joueur</a></li>
+                <li><a href="/ludo/affichagejoueurs">liste des Joueurs</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/ludo/">Commentaires</a>
+            <ul>
+                <li><a href="/ludo/ajoutcommentaires">Ajouter un commentaire</a></li>
+                <li><a href="/ludo/affichagecommentaires">Liste des Commentaires</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
 
 </html>
 {% block content %}{% endblock %}

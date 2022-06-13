@@ -10,17 +10,20 @@
 </head>
 
 <body>
+  <div class="margin">
 
-  <h1>Saisir les informations suivantes afin de créer un auteur :</h1>
-  {% if id != '' %}
-  <form method="post" action="/ludo/traitementauteurs/">
-    {% else %}
+    <h1>Saisir les informations suivantes afin de créer un auteur :</h1>
+    {% if id != '' %}
+    <form method="post" action="/ludo/traitementauteurs/">
+      {% else %}
 
-    {% endif %}
-    {% csrf_token %}
-    {{form.as_ul}}
-    <input type="submit" value="Ajouter" />
-  </form>
+      {% endif %}
+      {% csrf_token %}
+      {{form.as_p}}
+      <input class="inputmore" type="submit" value="Ajouter" />
+    </form>
+  </div>
 </body>
 
 </html>
+{% endblock %}

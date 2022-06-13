@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% extends 'main.html' %}
     {% load static %}
@@ -7,31 +8,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
+    <div class="margin">
 
-<h1>Nom du joueur :</h1>
-<p>
-    {{joueurs.nom_j}}
-</p>
+    <h1>Nom du joueur :</h1>
+    <p>
+        {{joueurs.nom_j}}
+    </p>
 
-<h2>Prénom du joueur :</h2>
-<p>
-    {{joueurs.prenom_j}}
-</p>
+    <h2>Prénom du joueur :</h2>
+    <p>
+        {{joueurs.prenom_j}}
+    </p>
 
-<h2>Mail du joueur :</h2>
-<p>
-    {{joueurs.mail_j}}
-</p>
+    <h2>Mail du joueur :</h2>
+    <p>
+        {{joueurs.mail_j}}
+    </p>
 
-<h2>Mot de passe du joueur :</h2>
-<p>
-    {{joueurs.mdp_j}}
-</p>
+    <h2>Mot de passe du joueur :</h2>
+    <p>
+        {{joueurs.mdp_j}}
+    </p>
 
-<h2>Type de joueurs :</h2>
-<p>
-    {{joueurs.type_j}}
-</p>
+    <h2>Type de joueurs :</h2>
+    <p>
+        {{joueurs.type_j}}
+    </p>
+    </div>
 </body>
+
 </html>
+{% endblock %}

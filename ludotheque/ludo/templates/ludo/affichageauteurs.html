@@ -7,18 +7,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Liste des auteurs</title>
 </head>
 
 <body>
-    <h2> Liste des auteurs crée :</h2>
-    <ol>
-        {% for a in liste %}
-        <li class="oui"> {{a}} <a href="/ludo/afficheauteurs/{{a.id}}/">détails</a> <a class="updateauteurs"
-                href="/ludo/updateauteurs/{{a.id}}/">Modifier</a> <a class="del"
-                href="/ludo/deleteauteurs/{{a.id}}/">Supprimer</a> </li>
-        {% endfor %}
-    </ol>
+    <div class="margin">
+        <h2> Liste des auteurs crée :</h2>
+        <ol>
+            {% for a in liste %}
+            <li class="oui"> {{a}} <a href="/ludo/afficheauteurs/{{a.id}}/">détails</a> <a class="updateauteurs"
+                    href="/ludo/updateauteurs/{{a.id}}/">Modifier</a> <a class="del"
+                    href="/ludo/deleteauteurs/{{a.id}}/">Supprimer</a> </li>
+            {% endfor %}
+        </ol>
+    </div>
 </body>
 
 </html>

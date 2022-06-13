@@ -8,7 +8,7 @@
     <title>Title</title>
 </head>
 <body>
-
+  <div class="margin">
 <h1>Saisir les informations suivantes afin de créer une categorie :</h1>
   {% if id is not None %}
     <form method="post" action="/ludo/updatetraitementcategorie/{{id}}/">
@@ -19,5 +19,7 @@
   {{form.as_ul}}
   <input type="submit" value="save"/>
   </form>
+  </div>
 </body>
 </html>
+{% endblock %}

@@ -7,10 +7,11 @@
 
     {% block content %}
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Liste des categories</title>
 </head>
 
 <body>
+    <div class="margin">
     <h2> Liste des catégories crée :</h2>
 
     <ol>
@@ -20,6 +21,7 @@
                 href="/ludo/deletecategorie/{{c.id}}/">Supprimer</a> </li>
         {% endfor %}
     </ol>
+    </div>
 </body>
 
 </html>

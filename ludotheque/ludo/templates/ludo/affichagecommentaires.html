@@ -7,19 +7,21 @@
 
     {% block content %}
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Liste des commentaires</title>
 </head>
 
 <body>
-    <h2> Liste des commentaires crée :</h2>
+    <div class="margin">
+        <h2> Liste des commentaires crée :</h2>
 
-    <ol>
-        {% for c in liste %}
-        <li> {{c}} <a href="/ludo/affichecommentaires/{{c.id}}/">détails</a> <a class="updatecommentaires"
-                href="/ludo/updatecommentaires/{{c.id}}/">Modifier</a> <a class="del"
-                href="/ludo/deletecommentaires/{{c.id}}/">Supprimer</a> </li>
-        {% endfor %}
-    </ol>
+        <ol>
+            {% for c in liste %}
+            <li> {{c}} <a href="/ludo/affichecommentaires/{{c.id}}/">détails</a> <a class="updatecommentaires"
+                    href="/ludo/updatecommentaires/{{c.id}}/">Modifier</a> <a class="del"
+                    href="/ludo/deletecommentaires/{{c.id}}/">Supprimer</a> </li>
+            {% endfor %}
+        </ol>
+    </div>
 </body>
 
 </html>

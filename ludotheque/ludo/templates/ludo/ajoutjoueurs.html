@@ -8,7 +8,7 @@
     <title>Title</title>
 </head>
 <body>
-
+  <div class="margin">
 <h1>Saisir les informations suivantes afin de créer un joueur :</h1>
   {% if id != '' %}
     <form method="post" action="/ludo/traitementjoueurs/">
@@ -16,8 +16,10 @@
 
    {% endif %}
   {% csrf_token %}
-  {{form.as_ul}}
-  <input type="submit" value="Ajouter"/>
+  {{form.as_p}}
+  <input class="inputmore" type="submit" value="Ajouter"/>
     </form>
+    </div>
 </body>
 </html>
+{% endblock %}
