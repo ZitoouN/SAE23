@@ -6,6 +6,10 @@ def home(request):
     template = "index.html"
     return render(request, 'ludo/index.html')
 
+def main(request):
+    template = "main.html"
+    return render(request, 'ludo/main.html')
+
 def ajoutcategorie(request):
     if request.method == "POST":
         form = CategorieForm(request)
