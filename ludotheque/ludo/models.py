@@ -14,7 +14,7 @@ class Categorie(models.Model):
 class Jeux(models.Model):
     titre_jeux = models.CharField(max_length=100)
     annee_jeux = models.IntegerField(blank=False)
-    image_jeux = models.ImageField(upload_to='images', null = True, blank = True)
+    image_jeux = models.CharField(max_length=200)
     editeur_jeux = models.CharField(max_length=100)
     auteur_jeux = models.CharField(max_length=100)
     categorie_jeux = models.ForeignKey("Categorie", on_delete=models.CASCADE)

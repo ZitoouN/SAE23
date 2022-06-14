@@ -24,12 +24,19 @@
 
         <h2>Mail du joueur :</h2>
         <p>
-            {{joueurs.mail_j}}
+            <a href="mailto:{{joueurs.mail_j}}">mailto:{{joueurs.mail_j}}</a>
         </p>
 
         <h2>Mot de passe du joueur :</h2>
         <p>
-            {{joueurs.mdp_j}}
+            <div>
+                <div class="quotetitle">Spoiler :<input type="button" value="Afficher"
+                        onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';        this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" />
+                </div>
+                <div class="quotecontent">
+                    <div style="display: none;">{{joueurs.mdp_j}}</div>
+                </div>
+            </div>
         </p>
 
         <h2>Type de joueurs :</h2>
