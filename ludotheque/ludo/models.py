@@ -14,10 +14,11 @@ class Categorie(models.Model):
 class Jeux(models.Model):
     titre_jeux = models.CharField(max_length=100)
     annee_jeux = models.IntegerField(blank=False)
-    image_jeux = models.CharField(max_length=150)
+    image_jeux = models.CharField(max_length=300)
     editeur_jeux = models.CharField(max_length=100)
     auteur_jeux = models.CharField(max_length=100)
     categorie_jeux = models.ForeignKey("Categorie", on_delete=models.CASCADE)
+    auteur_jeux = models.ForeignKey("Auteurs", on_delete=models.CASCADE)
 
     def __str__(self):
         chaine2 = f"{self.titre_jeux}"
@@ -31,7 +32,7 @@ class Auteurs(models.Model):
     nom_aut = models.CharField(max_length=100)
     prenom_aut = models.CharField(max_length=100)
     age_aut = models.IntegerField(blank=False)
-    photo_aut = models.ImageField(upload_to='images', null = True, blank = True)
+    photo_aut = models.CharField(max_length=300)
 
     def __str__(self):
         chaine3 = f"{self.nom_aut} {self.prenom_aut}"
