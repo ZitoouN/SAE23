@@ -15,7 +15,6 @@
     {% if id != '' %}
     <form method="post" action="/ludo/traitementjeux/">
       {% else %}
-
       {% endif %}
       {% csrf_token %}
       {{form.as_p}}
