@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% extends 'main.html' %}
     {% load static %}
@@ -8,16 +9,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
+    <div class="margin">
+        <h2>Moyenne des notes pour ce jeux :</h2>
 
-<h1>Moyenne des notes pour ce jeux :</h1>
+        <h2>Particulier :</h2>
+        {{note2}}
 
-<h2>PARTICULIER :</h2>
-{{note2}}
-
-<h2>PRO :</h2>
-{{note}}
-
+        <h2>Professionnel :</h2>
+        {{note}}
+    </div>
 </body>
+
 </html>
 {% endblock %}
