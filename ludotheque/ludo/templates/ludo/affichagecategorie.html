@@ -12,15 +12,15 @@
 
 <body>
     <div class="margin">
-    <h2> Liste des catégories crée :</h2>
+        <h2> Liste des catégories crée :</h2>
 
-    <ol>
-        {% for c in liste %}
-        <li> {{c}} <a href="/ludo/affichecategorie/{{c.id}}/">détails</a> <a class="updatecategorie"
-                href="/ludo/updatecategorie/{{c.id}}/">Modifier</a> <a class="del"
-                href="/ludo/deletecategorie/{{c.id}}/">Supprimer</a> </li>
-        {% endfor %}
-    </ol>
+        <ol>
+            {% for c in liste %}
+            <li> {{c}} <a href="/ludo/affichecategorie/{{c.id}}/">détails</a> <a class="updatecategorie"
+                    href="/ludo/updatecategorie/{{c.id}}/">Modifier</a> <a class="del"
+                    href="/ludo/deletecategorie/{{c.id}}/">Supprimer</a> </li>
+            {% endfor %}
+        </ol>
     </div>
 </body>
 
