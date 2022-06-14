@@ -14,9 +14,9 @@ class Categorie(models.Model):
 class Jeux(models.Model):
     titre_jeux = models.CharField(max_length=100)
     annee_jeux = models.IntegerField(blank=False)
-    image_jeux = models.CharField(max_length=200)
+    image_jeux = models.CharField(max_length=150)
     editeur_jeux = models.CharField(max_length=100)
-    auteur_jeux = models.ForeignKey("Auteurs", on_delete=models.CASCADE)
+    auteur_jeux = models.CharField(max_length=100)
     categorie_jeux = models.ForeignKey("Categorie", on_delete=models.CASCADE)
 
     def __str__(self):

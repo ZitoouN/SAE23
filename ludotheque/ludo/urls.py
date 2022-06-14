@@ -45,4 +45,8 @@ urlpatterns = [
     path('updatecommentaires/<int:id>/', views.updatecommentaires),
     path('updatetraitementcommentaires/<int:id>/', views.updatetraitementcommentaires),
     path('deletecommentaires/<int:id>/', views.deletecommentaires),
+
+    path('moyennenotes/<int:id>/', views.affichagemoyenne),
+    path('moyennenotes/<int:id>/', views.affichagemoyenne2),
+    path('commentairenotes/<int:id>/', views.commentairenotes),
 ]

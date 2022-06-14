@@ -238,3 +238,26 @@ def deletecommentaires(request, id):
     commentaires = models.Commentaires.objects.get(pk=id)
     commentaires.delete()
     return HttpResponseRedirect('/ludo/affichagecommentaires')
+
+def affichagemoyenne(request, id):
+    jeu = models.Jeux.objects.get(pk=id)
+    liste6 = list(models.Commentaires.objects.filter(jeux_com=jeu))
+    temp = 0
+    for i in liste6:
+        temp = temp + i.note_com
+    note = temp/len(liste6)
+    return render(request, 'ludo/moyennenotes.html',{"liste" : liste6,"note":note})
+
+def affichagemoyenne2(request, id):
+    jeu = models.Jeux.objects.get(pk=id)
+    liste7 = list(models.Commentaires.objects.filter(jeux_com=jeu))
+    temp = 0
+    for p in liste7:
+        temp = temp + p.note_com
+    note2 = temp/len(liste7)
+    return render(request, 'ludo/moyennenotes.html',{"liste" : liste7,"note2":note2})
+
+def commentairenotes(request, id):
+    jeu = models.Jeux.objects.get(pk=id)
+    liste7 = list(models.Commentaires.objects.filter(jeux_com=jeu))
+    return render(request, 'ludo/commentairenotes.html',{"liste" : liste7})
