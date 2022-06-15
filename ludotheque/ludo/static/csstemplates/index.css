@@ -65,6 +65,7 @@ body {
     color: black;
     background-color: #e4e1e1;
     font-weight: bolder;
+    width: 100%;
 }
 label{
     float: left;
@@ -108,7 +109,11 @@ h1{
     margin-right: auto;
 }
 .li_Border{
+    justify-content: space-between;
     border: solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
     margin: 1%;
-    
+    float: left;
 }

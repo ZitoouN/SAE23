@@ -12,12 +12,10 @@
 
 <body>
     <div class="margin">
-
         <h2> Liste des joueurs crée :</h2>
-
-        <ol>
-            {% for p in liste %}
-            <ol class="li_Border">
+        {% for p in liste %}
+        <div class="li_Border">
+            <ol>
                 <li>
                     {{p}}
                     <ul><a href="/ludo/affichejoueurs/{{p.id}}/">détails</a></ul>
@@ -26,9 +24,8 @@
                     <ul><a class="updatejoueurs" href="/ludo/updatejoueurs/{{p.id}}/">Fiche du joueur</a></ul>
                 </li>
             </ol>
-
-            {% endfor %}
-        </ol>
+        </div>
+        {% endfor %}
     </div>
 </body>
 

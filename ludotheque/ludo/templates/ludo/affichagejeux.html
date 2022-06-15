@@ -14,17 +14,20 @@
     <div class="margin">
 
         <h2> Liste des jeux crée :</h2>
-
-        <ol>
-            {% for j in liste %}
-            <li> {{j}} <a href="/ludo/affichejeux/{{j.id}}/">détails</a> <a class="updatejeux"
-                    href="/ludo/updatejeux/{{j.id}}/">Modifier</a> <a class="del"
-                    href="/ludo/deletejeux/{{j.id}}/">Supprimer</a> <a href="/ludo/moyennenotes/{{j.id}}/">Moyenne des
-                    notes</a> <a href="/ludo/commentairenotes/{{j.id}}/">Commentaire sur
-                    les
-                    jeux</a></li>
-            {% endfor %}
-        </ol>
+        {% for j in liste %}
+        <div class="li_Border">
+            <ol>
+                <li>
+                    {{j}}
+                    <ul><a href="/ludo/affichejeux/{{j.id}}/">détails</a></ul>
+                    <ul><a class="updatejeux" href="/ludo/updatejeux/{{j.id}}/">Modifier</a></ul>
+                    <ul><a class="del" href="/ludo/deletejeux/{{j.id}}/">Supprimer</a></ul>
+                    <ul><a href="/ludo/moyennenotes/{{j.id}}/">Moyenne des notes</a></ul>
+                    <ul><a href="/ludo/commentairenotes/{{j.id}}/">Commentaire sur les jeux</a></ul>
+                </li>
+            </ol>
+        </div>
+        {% endfor %}
     </div>
 </body>
 
