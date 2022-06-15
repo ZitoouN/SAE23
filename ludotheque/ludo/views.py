@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from . forms import CategorieForm, JeuxForm, AuteursForm, JoueursForm, CommentairesForm
 from . import models
 
-def home(request):
+def index(request):
     template = "index.html"
     return render(request, 'ludo/index.html')
 

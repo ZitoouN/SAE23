@@ -17,10 +17,16 @@
 
         <ol>
             {% for p in liste %}
-            <li> {{p}} <a href="/ludo/affichejoueurs/{{p.id}}/">détails</a> <a class="updatejoueurs"
-                    href="/ludo/updatejoueurs/{{p.id}}/">Modifier</a> <a class="del"
-                    href="/ludo/deletejoueurs/{{p.id}}/">Supprimer</a> <a class="updatejoueurs"
-                    href="/ludo/updatejoueurs/{{p.id}}/">Fiche du joueur</a> </li>
+            <ol class="li_Border">
+                <li>
+                    {{p}}
+                    <ul><a href="/ludo/affichejoueurs/{{p.id}}/">détails</a></ul>
+                    <ul><a class="updatejoueurs" href="/ludo/updatejoueurs/{{p.id}}/">Modifier</a></ul>
+                    <ul><a class="del" href="/ludo/deletejoueurs/{{p.id}}/">Supprimer</a></ul>
+                    <ul><a class="updatejoueurs" href="/ludo/updatejoueurs/{{p.id}}/">Fiche du joueur</a></ul>
+                </li>
+            </ol>
+
             {% endfor %}
         </ol>
     </div>
