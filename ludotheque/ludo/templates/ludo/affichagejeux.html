@@ -16,12 +16,14 @@
         <h2> Liste des jeux crée :</h2>
         {% for j in liste %}
         <div class="li_Border">
-            {{j}}
-            <ul><a href="/ludo/affichejeux/{{j.id}}/">détails</a></ul>
-            <ul><a class="updatejeux" href="/ludo/updatejeux/{{j.id}}/">Modifier</a></ul>
-            <ul><a class="del" href="/ludo/deletejeux/{{j.id}}/">Supprimer</a></ul>
-            <ul><a href="/ludo/moyennenotes/{{j.id}}/">Moyenne des notes</a></ul>
-            <ul><a href="/ludo/commentairenotes/{{j.id}}/">Commentaire sur les jeux</a></ul>
+            <ul>
+                {{j}}
+                <ul><a href="/ludo/affichejeux/{{j.id}}/">détails</a></ul>
+                <ul><a class="updatejeux" href="/ludo/updatejeux/{{j.id}}/">Modifier</a></ul>
+                <ul><a class="del" href="/ludo/deletejeux/{{j.id}}/">Supprimer</a></ul>
+                <ul><a href="/ludo/moyennenotes/{{j.id}}/">Moyenne des notes</a></ul>
+                <ul><a href="/ludo/commentairenotes/{{j.id}}/">Commentaire sur les jeux</a></ul>
+            </ul>
         </div>
         {% endfor %}
     </div>
