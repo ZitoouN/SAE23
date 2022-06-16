@@ -109,11 +109,10 @@ h1{
     margin-right: auto;
 }
 .li_Border{
-    justify-content: space-between;
+    padding-right: 10%;
     border: solid black;
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
     margin: 1%;
-    float: left;
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
 }

@@ -14,12 +14,11 @@ class CategorieForm(ModelForm):
 class JeuxForm(ModelForm):
     class Meta :
         model = models.Jeux
-        fields = ('titre_jeux', 'annee_jeux', 'image_jeux', 'editeur_jeux', 'auteur_jeux', 'categorie_jeux')
+        fields = ('titre_jeux', 'annee_jeux', 'image_jeux', 'auteur_jeux', 'categorie_jeux')
         labels = {
             'titre_jeux' : _('Titre du jeu'),
             'annee_jeux' : _('Annee du jeu'),
             'image_jeux' : _('Image du jeu'),
-            'editeur_jeux' : _('Editeur du jeu'),
             'auteur_jeux' : _('Auteur du jeu'),
             'categorie_jeux' : _('Categorie du jeu'),
         }
@@ -27,12 +26,11 @@ class JeuxForm(ModelForm):
 class AuteursForm(ModelForm):
     class Meta :
         model = models.Auteurs
-        fields = ('nom_aut', 'prenom_aut', 'age_aut', 'photo_aut')
+        fields = ('nom_aut', 'age_aut', 'photo_aut')
         labels = {
-            'nom_aut' : _('Nom de l\'Auteur'),
-            'prenom_aut' : _('Prenom de l\'Auteur'),
-            'age_aut' : _('Age de l\'Auteur'),
-            'photo_aut' : _('Photo de l\'Auteur'),
+            'nom_aut' : _('Nom du studio '),
+            'age_aut' : _('Date de création '),
+            'photo_aut' : _('Icone du studio '),
         }
 
 class JoueursForm(ModelForm):

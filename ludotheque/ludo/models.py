@@ -15,8 +15,6 @@ class Jeux(models.Model):
     titre_jeux = models.CharField(max_length=100)
     annee_jeux = models.IntegerField(blank=False)
     image_jeux = models.CharField(max_length=300)
-    editeur_jeux = models.CharField(max_length=100)
-    auteur_jeux = models.CharField(max_length=100)
     categorie_jeux = models.ForeignKey("Categorie", on_delete=models.CASCADE)
     auteur_jeux = models.ForeignKey("Auteurs", on_delete=models.CASCADE)
 
@@ -25,17 +23,16 @@ class Jeux(models.Model):
         return chaine2
 
     def dico_jeux(self):
-        return {"titre_jeux": self.titre_jeux, "anne_jeux": self.annee_jeux, "image_jeux": self.image_jeux, "editeur_jeux": self.image_jeux, "auteur_jeux": self.auteur_jeux, "categorie_jeux": self.categorie_jeux}
+        return {"titre_jeux": self.titre_jeux, "anne_jeux": self.annee_jeux, "image_jeux": self.image_jeux, "auteur_jeux": self.auteur_jeux, "categorie_jeux": self.categorie_jeux}
 
 
 class Auteurs(models.Model):
     nom_aut = models.CharField(max_length=100)
-    prenom_aut = models.CharField(max_length=100)
     age_aut = models.IntegerField(blank=False)
     photo_aut = models.CharField(max_length=300)
 
     def __str__(self):
-        chaine3 = f"{self.nom_aut} {self.prenom_aut}"
+        chaine3 = f"{self.nom_aut}"
         return chaine3
 
     def dico_aut(self):

@@ -68,7 +68,7 @@ def traitementjeux(request):
     jform = JeuxForm(request.POST)
     if jform.is_valid():
         jeux = jform.save()
-        return HttpResponseRedirect('/ludo/')
+        return HttpResponseRedirect('/ludo/affichagejeux')
     else :
         return render(request,"ludo/ajoutjeux.html", {"form" : jform})
 
@@ -114,7 +114,7 @@ def traitementauteurs(request):
     aform = AuteursForm(request.POST)
     if aform.is_valid():
         auteurs = aform.save()
-        return HttpResponseRedirect('/ludo/')
+        return HttpResponseRedirect('/ludo/affichageauteurs')
     else :
         return render(request,"ludo/ajoutauteurs.html", {"form" : aform})
 
@@ -161,7 +161,7 @@ def traitementjoueurs(request):
     jform = JoueursForm(request.POST)
     if jform.is_valid():
         joueurs = jform.save()
-        return HttpResponseRedirect('/ludo/')
+        return HttpResponseRedirect('/ludo/affichagejoueurs')
     else :
         return render(request,"ludo/ajoutjoueurs.html", {"form" : jform})
 
@@ -207,7 +207,7 @@ def traitementcommentaires(request):
     cform = CommentairesForm(request.POST)
     if cform.is_valid():
         commentaires = cform.save()
-        return HttpResponseRedirect('/ludo/')
+        return HttpResponseRedirect('/ludo/affichagecommentaires')
     else :
         return render(request,"ludo/ajoutcommentaires.html", {"form" : cform})
 

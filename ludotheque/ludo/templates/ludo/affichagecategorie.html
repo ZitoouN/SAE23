@@ -15,14 +15,12 @@
         <h2> Liste des catégories crée :</h2>
         {% for c in liste %}
         <div class="li_Border">
-            <ol>
-                <li>
-                    {{c}}
-                    <ul><a href="/ludo/affichecategorie/{{c.id}}/">détails</a></ul>
-                    <ul><a class="updatecategorie" href="/ludo/updatecategorie/{{c.id}}/">Modifier</a></ul>
-                    <ul><a class="del" href="/ludo/deletecategorie/{{c.id}}/">Supprimer</a></ul>
-                </li>
-            </ol>
+            <ul>
+                {{c}}
+                <ul><a href="/ludo/affichecategorie/{{c.id}}/">détails</a></ul>
+                <ul><a class="updatecategorie" href="/ludo/updatecategorie/{{c.id}}/">Modifier</a></ul>
+                <ul><a class="del" href="/ludo/deletecategorie/{{c.id}}/">Supprimer</a></ul>
+            </ul>
         </div>
         {% endfor %}
         </ol>

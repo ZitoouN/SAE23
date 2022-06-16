@@ -15,14 +15,10 @@
         <h2> Liste des commentaires crée :</h2>
         {% for c in liste %}
         <div class="li_Border">
-            <ol>
-                <li>
                     {{c}}
                     <ul><a href="/ludo/affichecommentaires/{{c.id}}/">détails</a></ul>
                     <ul><a href="/ludo/updatecommentaires/{{c.id}}/">Modifier</a></ul>
                     <ul><a href="/ludo/deletecommentaires/{{c.id}}/">Supprimer</a></ul>
-                </li>
-            </ol>
         </div>
         {% endfor %}
     </div>
