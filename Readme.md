@@ -10,7 +10,7 @@ Ce sujet va vous permettre de fournir une interface de gestion d'une ludothèque
 - des joueurs (id, nom prénom, mail, mot de passe, type => professionnel ou particulier)
 - des commentaires sur les jeux (film, personnes, note,  commentaire, date)
 - une liste de jeux pour les usagers
-
+*****************************************************************************************************
 Vous devez implémenter un CRUD pour chacun de ces types de données. vous préparerez la base en avance et la remplirez avec des catégories, des jeux et des auteurs.
 Votre site web devra permettre la saisie de nouveaux usagers et des commentaires qu'ils font sur les jeux. vous calculerez pour chaque jeu la moyenne des notes pour chaque type de personnes commentant. vous devrez aussi mettre en avant les commentaires avec le plus haute note et avec la plus basse note sur la page de chaque jeux.
 
